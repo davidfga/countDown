@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CountDown</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+
+   <div class="clock" id="clock">
+   </div>
+   <div class="overlay" id="overlay">
+       <div class="popup" id="popup">
+           <h3 class="message text" id="message">Por favor, elige cuantos minutos faltan</h3>
+           <div  class="message form" id="formSettings" action="">
+               <div class="message container-input">
+                   <input class="message input" type="number" id="inputMinutes" autofocus>
+               </div>
+               <button class="message button" onclick="setMinute ()" type="buton">Iniciar</button>
+            </div>
+       </div>
+   </div>
+
+</body>
+
+<script src="./script.js"></script>
+
+</html>

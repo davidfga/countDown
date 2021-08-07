@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+:root{
+    --background:white;
+    --clock:rgba(34, 34, 34, 0.3);;
+    --counter: #4a6da7;
+    --popup: white;
+
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+    width: 40vmax;
+    height: 40vmax;
+    background: var(--clock);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 50%;
+    box-shadow: 0.5vmax 0.5vmax 0.5vmax  rgba(0, 0, 0, 0.8);
+}
+
+.counter{
+    width: 40vmax;
+    height: 40vmax;
+    --rotation: 0;
+    position: absolute;
+    background-color: var(--counter);
+    bottom: 50%;
+    left: 50%;
+    width: 0.5vmax;
+    height: 50%;
+    transform: translateX(-50%) rotate(calc(var(--rotation)*1deg));
+    transform-origin: bottom;
+    border-bottom-right-radius: 100%;
+    border-bottom-left-radius: 100%;
+    border-top-right-radius: 10%;
+    border-top-left-radius: 10%;
+    
+}
+
+.overlay{
+    background-color: rgba(0, 0, 0, .3);
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .3 ease all;
+
+}
+
+.popup{
+    background-color: var(--popup);
+    border-radius: 10px;
+    box-shadow: 5vmax 5vmax 5vmax  rgba(0, 0, 0, .3);
+    padding: 20px;
+    text-align: center;
+    width: 600px;
+
+}
+
+.message{
+    background-color: var(--popup);
+    margin: 10px;
+    font-size: 2rem;
+}
+
+.message .button{
+    background-color: var(--counter);
+    color: var(--background);
+    border-radius: 10px;
+    padding: 5px;
+}
